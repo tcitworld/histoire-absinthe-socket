@@ -1,9 +1,10 @@
-/// <reference types="histoire" />
+/// <reference types="@histoire/plugin-vue/components" />
 
-import { defineConfig } from "vite";
+import { defineConfig } from 'histoire'
+import { HstVue } from '@histoire/plugin-vue'
 
 export default defineConfig({
-  histoire: {
-    setupFile: "/src/histoire.setup.ts",
-  },
-});
+  plugins: [
+    HstVue(),
+  ],
+})
